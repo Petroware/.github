@@ -1,5 +1,5 @@
 Log I/O:
-- [Background and Examples](../LogIO.md)
+- [Background and Examples](https://github.com/Petroware/.github/blob/main/LogIO.md)
 
 JWitsml:
-- [Tutorials](../JWitsml.md)
+- [Tutorials](https://github.com/Petroware/.github/blob/main/JWitsml.md)
