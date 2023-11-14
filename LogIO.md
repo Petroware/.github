@@ -1,4 +1,4 @@
-# Background and examples <!-- omit from toc -->
+# Background and Examples <!-- omit from toc -->
 The coding examples below are shown using the Java API. The .NET API is equivalent.
 
 - [DLIS](#dlis)
