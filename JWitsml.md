@@ -214,7 +214,7 @@ Unlike the previous ETP examples, all calls to the **WitsmlServer** instance are
 
 ## Getting WITSML data from the server
 
-All data are retrieved through a [WitsmlServer](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlServer.html) instance which represents the WITSML server in the client program.
+All data are retrieved through a [WitsmlServer](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlServer.html) instance which represents the WITSML server in the client program.
 There are bascially three different ways to get data:
 
 1. Get multiple children of a given type from a specific parent
@@ -297,11 +297,11 @@ Attribute names in the JWitsml library does not necessarily correspond exactly t
      System.out.println("Time: " + mudLog.getTime());
      System.out.println("Mud log company: " + mudLog.getMudLogCompany());
   
-Floating point values that may have a *unit* associated are represented by the [Value](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/Value.html) type which is a compound of a double and a unit symbol string.
+Floating point values that may have a *unit* associated are represented by the [Value](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/Value.html) type which is a compound of a double and a unit symbol string.
 
 ## The WitsmlQuery class
 
-The [WitsmlQuery](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlQuery.html) class is used to control *which properties* to extract for each object as well as for *object filtering*.
+The [WitsmlQuery](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlQuery.html) class is used to control *which properties* to extract for each object as well as for *object filtering*.
 
 A default **WitsmlQuery** instance as shown in the above examples simply means *get all properties*.
 
@@ -356,7 +356,7 @@ Note that calls to the **WitsmlServer.get()**, **getOne()** and **refresh()** me
 
 ## Filtering
 
-The [WitsmlQuery](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlQuery.html) class can be used for object filtering as shown in the following example:
+The [WitsmlQuery](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlQuery.html) class can be used for object filtering as shown in the following example:
 
 ```java
 // Get all active wellbores of a well
@@ -556,7 +556,7 @@ Note that servers *may* require children to be deleted first, if an object with 
 
 WITSML defines an elaborate set of units and unit conversions. More than 2.300 units of more than 250 different petroleum related quantities are defined. JWitsml supports this information through a powerful yet simple API.
 
-WITSML units are accessed through the [WitsmlUnitManager](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/units/WitsmlUnitManager.html) singleton class. The unit manager provides an optional service for client programs that are doing computational operations on numerical WITSML data.
+WITSML units are accessed through the [WitsmlUnitManager](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/units/WitsmlUnitManager.html) singleton class. The unit manager provides an optional service for client programs that are doing computational operations on numerical WITSML data.
 
 *Units* (such as "*meter*" or "*bar*") are organized by WITSML in *quantities* (such as "*length*" or "*pressure*"). Each quantity defines a *base unit* (typically the SI unit) and potentially a set of *derived units*.
 
@@ -620,7 +620,7 @@ JWitsml uses version 2.2 of the Energistics unit database which is compatible wi
 
 ## Connection Logging
 
-A client application may supervise the details of the ETP communication by adding a [EtpAccessListener](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/etp/EtpAccessListener.html) to the **EtpServer** class:
+A client application may supervise the details of the ETP communication by adding a [EtpAccessListener](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/etp/EtpAccessListener.html) to the **EtpServer** class:
 
 ```java
 public class AccessListener implements EtpAccessListener {
@@ -636,7 +636,7 @@ The **access()** method is called immedeately *before* an ETP message is sent fr
 
 The methods may be used for simple client logging or for creating advanced performance statistics etc.
 
-The equivalent API for WITSML 1 is through [WitsmlAccessListener](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlAccessListener.html) in the **WitsmlServer** class:
+The equivalent API for WITSML 1 is through [WitsmlAccessListener](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlAccessListener.html) in the **WitsmlServer** class:
 
 ```java
 public class ClientListener implements WitsmlAccessListener {
@@ -655,4 +655,4 @@ public class ClientListener implements WitsmlAccessListener {
   
 The **requestSent()** method is called immediately *before* JWitsml access the remote WITSML server. The **responseReceived()** method is called immediately *after* the response is received from the server.
 
-The [WitsmlRequest](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlRequest.html) instance contains information such as the time of request, the low level WSDL procedure name, the XML query, the WITSML type being queried etc. The [WitsmlResponse](https://petroware.no/products/jwitsml/javadoc/org/jwitsml/WitsmlResponse.html) instance contains a link to the corresponding request instance as well as the complete XML response, response time, status code, server message and exception if the access failed for some reason.
+The [WitsmlRequest](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlRequest.html) instance contains information such as the time of request, the low level WSDL procedure name, the XML query, the WITSML type being queried etc. The [WitsmlResponse](https://petroware.no/products/jwitsml/javadoc/no/petroware/jwitsml/WitsmlResponse.html) instance contains a link to the corresponding request instance as well as the complete XML response, response time, status code, server message and exception if the access failed for some reason.
